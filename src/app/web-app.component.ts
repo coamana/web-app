@@ -148,6 +148,7 @@ export class WebAppComponent implements OnInit {
     }
     if (!localStorage.getItem('mifosXServers')) {
       this.settingsService.setServers([
+        'https://mifos-server.azurewebsites.net',
         'https://dev.mifos.io',
         'https://demo.mifos.io',
         'https://staging.mifos.io',
