@@ -5,7 +5,7 @@
       <mat-form-field>
         <input matInput placeholder="Search by Name" [formControl]="name">
       </mat-form-field>
-      <mat-checkbox #showClosedGroups labelPosition="after" (change)="changeShowClosedGroups()">Show Closed Groups</mat-checkbox>
+      <mat-checkbox #showClosedGroups labelPosition="after" (change)="changeShowClosedGroups()">Show Closed Cooperatives/Groups</mat-checkbox>
     </div>
     <div class="action-button" fxLayoutGap="25px">
       <button mat-raised-button color="primary" [routerLink]="['../', 'organization', 'bulk-import', 'Groups']">
@@ -30,7 +30,7 @@
     </ng-container>
 
     <ng-container matColumnDef="externalId">
-      <th mat-header-cell *matHeaderCellDef> ExternalID </th>
+      <th mat-header-cell *matHeaderCellDef> Cooperative Reg. No. </th>
       <td mat-cell *matCellDef="let group"> {{ group.externalId }} </td>
     </ng-container>
 

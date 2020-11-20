@@ -29,17 +29,17 @@
         <mat-card-title>
           <h3>
             <i class="fa fa-stop" [ngClass]="clientViewData.status.code|statusLookup" [matTooltip]="clientViewData.status.value"></i>
-            Client Name : {{clientViewData.displayName}}
+            Client/MSME Name : {{clientViewData.displayName}}
           </h3>
         </mat-card-title>
 
         <mat-card-subtitle>
           <p>
-            Client #:{{clientViewData.accountNo}} | External
-            Id: {{clientViewData.externalId}} | Staff:{{clientViewData.staffName || 'Unassigned'}}<br />
-            Activation Date :
-            {{(clientViewData.activationDate)?(clientViewData.activationDate|date) :'Not Activated'}}<br />
-            Member Of : 
+            Client/MSME #: {{clientViewData.accountNo}} | BVN: {{clientViewData.externalId}} 
+            | Staff: {{clientViewData.staffName || 'Unassigned'}}<br />
+            Activation Date:
+            {{(clientViewData.activationDate) ? (clientViewData.activationDate|date) : 'Not Activated'}}<br />
+            Member Of: 
             <span *ngFor="let group of clientViewData.groups">
               <a>{{group.name}}</a>&nbsp;
             </span>

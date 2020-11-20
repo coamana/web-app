@@ -15,14 +15,14 @@
         <mat-card-title>
           <h3>
             <i class="fa fa-stop" [ngClass]="groupViewData.status.code|statusLookup" [matTooltip]="groupViewData.status.value"></i>
-            Group Name : {{groupViewData.name}}
+            Group Name: {{groupViewData.name}}
           </h3>
         </mat-card-title>
         <mat-card-subtitle>
           <p>
             Group #: {{groupViewData.id}} | Center Name: {{groupViewData.centerName}} | Staff: {{groupViewData.staffName || 'Unassigned'}}<br/>
             Office Name: {{groupViewData.officeName}}<br/>
-            Activation Date : {{(groupViewData.activationDate)?(groupViewData.activationDate|date) :'Not Activated'}}<br/>
+            Activation Date: {{(groupViewData.activationDate) ? (groupViewData.activationDate|date) : 'Not Activated'}}<br/>
             <span *ngIf="!groupViewData.active">
              Closure Date: {{groupViewData.timeline.closedOnDate | date}}
             </span>
