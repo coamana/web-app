@@ -36,7 +36,7 @@ const routes: Routes = [
   Route.withShell([
     {
       path: 'groups',
-      data: { title: extract('Groups'), breadcrumb: 'Groups', routeParamBreadcrumb: false },
+      data: { title: extract('Groups'), breadcrumb: 'Cooperatives/Groups', routeParamBreadcrumb: false },
       children: [
         {
           path: '',

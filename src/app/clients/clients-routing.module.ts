@@ -52,7 +52,7 @@ import { ClientDataAndTemplateResolver } from './common-resolvers/client-and-tem
 const routes: Routes = [
   Route.withShell([{
     path: 'clients',
-    data: { title: extract('Clients'), breadcrumb: 'Clients', routeParamBreadcrumb: false },
+    data: { title: extract('Clients'), breadcrumb: 'Clients/MSMEs', routeParamBreadcrumb: false },
     children: [
       {
         path: '',
@@ -60,7 +60,7 @@ const routes: Routes = [
       },
       {
         path: 'create',
-        data: { title: extract('Create Client'), breadcrumb: 'Create Client', routeParamBreadcrumb: false },
+        data: { title: extract('Create Client'), breadcrumb: 'Create Client/MSME', routeParamBreadcrumb: false },
         component: CreateClientComponent,
         resolve: {
           clientAddressFieldConfig: ClientAddressFieldConfigurationResolver,
@@ -172,7 +172,7 @@ const routes: Routes = [
   },
   {
     path: 'clients',
-    data: { title: extract('Clients'), breadcrumb: 'Clients', routeParamBreadcrumb: false },
+    data: { title: extract('Clients'), breadcrumb: 'Clients/MSMEs', routeParamBreadcrumb: false },
     children: [
       {
         path: ':clientId',
