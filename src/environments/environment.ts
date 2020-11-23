@@ -11,7 +11,7 @@ export const environment = {
   version: env.mifos_x_version + '-dev',
   fineractPlatformTenantId: 'default',  // For connecting to server running elsewhere update the tenant identifier
   baseApiUrl: JSON.parse(localStorage.getItem('mifosXServerURL')) || 'https://dev.mifos.io',  // For connecting to server running elsewhere update the base API URL
-  allowServerSwitch: env.allow_switching_backend_instance,
+  allowServerSwitch: /true/.test(env.allow_switching_backend_instance), // Can't use Boolean(value) as value is string and Boolean('false') = true
   apiProvider: '/fineract-provider/api',
   apiVersion: '/v1',
   serverUrl: '',
