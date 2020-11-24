@@ -1,1 +1,1 @@
-web: /web-app/
+web: dist/web-app/
